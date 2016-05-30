@@ -1,8 +1,9 @@
 from functools import reduce
-def prod(L):
-    def fu(x,y):
-        return x*y
-    return reduce(fu,L)
-print('1 * 2 * 3 * 4 * 5=',prod([1,2,3,4,5]))
+def char2num(s):
+    return{'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}[s]  
+def fn(x,y):
+    return x*10 +y
+
+print(reduce(fn,map(char2num,'13579')))  
 
 
